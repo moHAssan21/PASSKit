@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Passwords</title>
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span class="pass">PASS</span><span class="kit">Kit</span>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="manage.html">Manage Passwords</a>
+            </div>
+            <div class="navbar-buttons">
+                <button class="btn primary-btn">Login</button>
+                <button class="btn outline-btn">Sign Up</button>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <div class="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="manage.html">Manage Passwords</a>
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </header>
+
+    <section class="manage-passwords">
+        <div class="password-box">
+            <h2>Manage Passwords</h2>
+            <div class="password-container">
+            
+            </div>
+        </div>
+    </section>
+    
+    <section class="backup-restore-section">
+        <div class="section-content">
+            <div class="backup-info">
+                <h2>Backup and Restore</h2>
+                <p>Manage your password backups easily with detailed information about each backup. You can backup your passwords securely and restore them when needed.</p>
+                <p>Choose to share your backup securely, delete old backups, or restore your data to your current session. Everything is under your control.</p>
+            </div>
+            <div class="backup-card">
+                <h3>Backup Details</h3>
+                <div class="backup-entry">
+                    <p><strong>Backup Name:</strong> August Backup</p>
+                    <p><strong>Date:</strong> August 24, 2024</p>
+                    <p><strong>Size:</strong> 1.2 MB</p>
+                    <div class="backup-icons">
+                        <i class="fas fa-trash-alt delete-icon"></i>
+                        <i class="fas fa-share-alt share-icon"></i>
+                        <i class="fas fa-sync-alt restore-icon"></i>
+                    </div>
+                </div>
+                <div class="backup-entry">
+                    <p><strong>Backup Name:</strong> July Backup</p>
+                    <p><strong>Date:</strong> July 20, 2024</p>
+                    <p><strong>Size:</strong> 950 KB</p>
+                    <div class="backup-icons">
+                        <i class="fas fa-trash-alt delete-icon"></i>
+                        <i class="fas fa-share-alt share-icon"></i>
+                        <i class="fas fa-sync-alt restore-icon"></i>
+                    </div>
+                </div>
+                <div class="backup-buttons">
+
+                    <button class="btn restore-btn">Restore</button>
+                    <button class="btn stroke-btn">Backup</button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+        <footer class="footer">
+        <div class="footer-social">
+            <h3>Connect with Us</h3>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-x-twitter"></i> X</a></li>
+                <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-links">
+            <ul>
+                <li><h4>About Us</h4></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-support">
+            <h3>Support</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Imprint</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Your Privacy Choices</a></li>
+            </ul>
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="manage.js"></script>
+</body>
+</html>

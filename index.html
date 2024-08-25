@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSKit</title>
+    <link rel="stylesheet" href="passkit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <span class="pass">PASS</span><span class="kit">Kit</span>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="manage.html">Manage Passwords</a>
+            </div>
+            <div class="navbar-buttons">
+                <button class="btn primary-btn">Login</button>
+                <button class="btn outline-btn">Sign Up</button>
+            </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <div class="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="manage.html">Manage Passwords</a>
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </header>
+    <section class="password-generator">
+        <div class="password-box">
+            <h2>Generate Password</h2>
+            <div class="password-field">
+                <input type="text" id="password" placeholder="Your password" readonly>
+                <button class="btn copy-btn" id="copyBtn">Copy</button>
+            </div>
+            <label for="length-range">Password Length: <span id="length-value">50</span></label>
+            <input type="range" id="length-range" min="0" max="100" value="50" oninput="document.getElementById('length-value').textContent = this.value">
+
+            <div class="options">
+                <label><input type="checkbox" id="uppercase"> Uppercase Letters</label>
+                <label><input type="checkbox" id="lowercase"> Lowercase Letters</label>
+                <label><input type="checkbox" id="numbers"> Numbers</label>
+                <label><input type="checkbox" id="symbols"> Symbols</label>
+            </div>
+
+            <div class="strength">
+                <label for="strength-bar">Password Strength:</label>
+                <progress id="strength-bar" value="50" max="100"></progress>
+            </div>
+
+            <div class="buttons">
+                <button class="btn outline-btn" id="saveBtn">Save Password</button>
+                <button class="btn primary-btn" id="generateBtn">Generate Password</button>
+            </div>
+        </div>
+    </section>
+     
+    <section class="password-security">
+        <div class="image-container">
+            <img src="soc.svg" alt="Strong Passwords">
+        </div>
+
+        <div class="info-panel">
+            <h2>Importance<br>
+             of Strong Passwords</h2>
+             <p>In today's digital world, the security of your personal and financial information is at risk from various cyber threats. One of the simplest and most effective ways to protect yourself is by using strong, unique passwords for your accounts. A strong password reduces the risk of unauthorized access and helps safeguard your data from cybercriminals.</p>
+             <p>Strong passwords should be long, ideally over 12 characters, and should include a mix of uppercase letters, lowercase letters, numbers, and symbols. Avoid using easily guessable information such as names, birthdays, or common words. Instead, opt for a combination of random characters to create a password that is difficult to crack.</p>
+            <button class="btn primary-btn">Generate Strong Password</button>
+        </div>
+    </section>
+
+
+    <section class="security-graphs">
+        <div class="text-content">
+            <h2>Security Threats<br>
+                of Weak Passwords</h2>
+            <p>Using weak passwords can expose you to numerous threats, including data breaches, identity theft, and financial loss. Experts recommend using complex and unique passwords for each account to minimize risks.</p>
+            <button class="btn blue-btn">Learn More</button>
+        </div>
+        <div class="chart-container">
+            <h3>Statistics on Password-Related Breaches</h3>
+            <canvas id="securityChart"></canvas>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2>Enjoy the highest levels of safety and comfort with our unique features</h2>
+        <div class="features-container">
+            <div class="feature-box">
+                <div class="icon-container" style="background-color: #ffcccb;">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Enhanced Security</h3>
+                <p>Our platform provides top-notch security features to protect your data.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-container" style="background-color: #c1f0f6;">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <h3>User-Friendly Interface</h3>
+                <p>Enjoy a seamless and intuitive user experience with our interface.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-container" style="background-color: #d4edda;">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Cloud Backup</h3>
+                <p>Automatically back up your data with our secure cloud services.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-container" style="background-color: #fff3cd;">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Real-Time Sync</h3>
+                <p>Keep your data synchronized across all devices in real-time.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-container" style="background-color: #e2e3e5;">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Strong Encryption</h3>
+                <p>All your sensitive information is protected with strong encryption.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon-container" style="background-color: #f3e6ff;">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Customizable Settings</h3>
+                <p>Personalize your experience with our wide range of settings.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="info-section">
+        <h2>Enhance Your Security Knowledge</h2>
+        <div class="cards-container">
+            
+            <div class="card">
+                <h3 class="card-title" style="color: #ff6666;">FAQ</h3>
+                <h4>How to Create a Strong Password</h4>
+                <p>Learn the best practices for creating strong passwords that keep your accounts secure.</p>
+                <button class="primary-button">Learn More</button>
+            </div>
+            
+            
+            <div class="card">
+                <h3 class="card-title" style="color: #ff6666;">Password Safety</h3>
+                <h4>How to Safely Store Your Passwords</h4>
+                <p>Discover methods to securely store and manage your passwords to prevent unauthorized access.</p>
+                <button class="primary-button">Learn More</button>
+            </div>
+            
+            
+            <div class="card">
+                <h3 class="card-title" style="color: #ff6666;">Two-Factor Authentication</h3>
+                <h4>Enhance Your Security with 2FA</h4>
+                <p>Find out how two-factor authentication adds an extra layer of security to your accounts.</p>
+                <button class="primary-button">Learn More</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            
+            <div class="faq-box">
+                <div class="faq-header">
+                    <h3>What is a strong password?</h3>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-content">
+                    <p>A strong password is one that is difficult to guess or crack. It should be a mix of letters, numbers, and symbols, and be at least 12 characters long.</p>
+                </div>
+            </div>
+    
+            
+            <div class="faq-box">
+                <div class="faq-header">
+                    <h3>How often should I change my password?</h3>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-content">
+                    <p>It's recommended to change your password every 3-6 months or sooner if you suspect it has been compromised.</p>
+                </div>
+            </div>
+    
+            
+            <div class="faq-box">
+                <div class="faq-header">
+                    <h3>Can I use the same password for multiple accounts?</h3>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-content">
+                    <p>No, it's not recommended. Using unique passwords for different accounts helps protect your security in case one account is compromised.</p>
+                </div>
+            </div>
+    
+            
+            <div class="faq-box">
+                <div class="faq-header">
+                    <h3>What is two-factor authentication (2FA)?</h3>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-content">
+                    <p>Two-factor authentication (2FA) adds an extra layer of security by requiring a second form of verification, such as a text message or authentication app, in addition to your password.</p>
+                </div>
+            </div>
+    
+            
+            <div class="faq-box">
+                <div class="faq-header">
+                    <h3>How can I recover my password if I forget it?</h3>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-content">
+                    <p>Most platforms offer a "Forgot Password" option where you can reset your password through your email or phone number. Follow the instructions provided to recover your account.</p>
+                </div>
+            </div>
+    
+            
+            <div class="faq-box">
+                <div class="faq-header">
+                    <h3>What should I do if I suspect my account has been hacked?</h3>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-content">
+                    <p>If you suspect your account has been hacked, immediately change your password and review recent activity. Contact the platform’s support team for further assistance and consider enabling additional security features like 2FA.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-social">
+            <h3>Connect with Us</h3>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fab fa-x-twitter"></i> X</a></li>
+                <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-links">
+            <ul>
+                <li><h4>About Us</h4></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-support">
+            <h3>Support</h3>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    
+        <div class="footer-bottom">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Imprint</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Your Privacy Choices</a></li>
+            </ul>
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+    </footer>
+    
+<script src="passkit.js"></script>
+</body>
+</html>
